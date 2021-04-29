@@ -123,7 +123,7 @@ open class SideMenuController: UIViewController {
         guard preferences.basic.shouldRespectLanguageDirection else {
             return false
         }
-        let attribute = view.semanticContentAttribute
+        let attribute = UIView().semanticContentAttribute
         let layoutDirection = UIView.userInterfaceLayoutDirection(for: attribute)
         return layoutDirection == .rightToLeft
     }
